@@ -71,6 +71,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/我的项目/Unity3d/Ruby’s 2D Adventure/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:/我的项目/Unity3d/Ruby’s 2D Adventure/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/我的项目/Unity3d/Ruby’s 2D Adventure/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -95,17 +98,14 @@
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>D:/我的项目/Unity3d/Ruby’s 2D Adventure/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/我的项目/Unity3d/Ruby’s 2D Adventure/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/我的项目/Unity3d/Ruby’s 2D Adventure/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/我的项目/Unity3d/Ruby’s 2D Adventure/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>D:/我的项目/Unity3d/Ruby’s 2D Adventure/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/我的项目/Unity3d/Ruby’s 2D Adventure/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
