@@ -15,6 +15,8 @@ public class EnemyController : MonoBehaviour
     int direction = 1;
 
     Animator animator;
+
+    public ParticleSystem smokeEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,7 @@ public class EnemyController : MonoBehaviour
         broken = false;
         rigidbody2D.simulated = false;  //系统停止计算这个刚体，优化性能
         animator.SetTrigger("Fixed");
+        smokeEffect.Stop();
     }
 
 }
