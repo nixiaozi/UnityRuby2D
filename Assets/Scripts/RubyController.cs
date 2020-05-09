@@ -27,6 +27,9 @@ public class RubyController : MonoBehaviour
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
 
+    public ParticleSystem HitEffect;
+    public ParticleSystem ResumEffect;
+
     /// <summary>
     /// 这个是一个可修改的外置对象
     /// </summary>
@@ -41,6 +44,9 @@ public class RubyController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
 
         currentHealth = maxHealth;
+
+        HitEffect.Stop();
+        ResumEffect.Stop();
     }
 
     // Update is called once per frame
@@ -95,10 +101,19 @@ public class RubyController : MonoBehaviour
 
             isInvincible = true;
             invincibleTimer = timeInvincible;
+
         }
         animator.SetTrigger("Hit"); // 受伤的动画
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" +maxHealth);
+        if (amount < 0)
+        {
+            HitEffect.Play();
+        }
+        else if (amount > 0)
+        {
+            ResumEffect.Play();
+        }
     }
 
     void Launch()
