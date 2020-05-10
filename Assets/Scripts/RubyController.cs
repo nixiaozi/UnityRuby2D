@@ -106,6 +106,7 @@ public class RubyController : MonoBehaviour
         animator.SetTrigger("Hit"); // 受伤的动画
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" +maxHealth);
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
         if (amount < 0)
         {
             HitEffect.Play();

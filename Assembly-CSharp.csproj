@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\HealthCollectible.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\RubyController.cs" />
+    <Compile Include="Assets\Scripts\UIHealthBar.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/我的项目/Unity3d/Ruby’s 2D Adventure/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
