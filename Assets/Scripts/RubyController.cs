@@ -35,6 +35,14 @@ public class RubyController : MonoBehaviour
     /// </summary>
     public GameObject projectilePrefab;
 
+    AudioSource audioSource;
+
+    /// <summary>
+    /// 发射子弹 和 受伤的音效
+    /// </summary>
+    public AudioClip lanuchAudioClip;
+    public AudioClip hitedAudioClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,8 +53,15 @@ public class RubyController : MonoBehaviour
 
         currentHealth = maxHealth;
 
+        audioSource= GetComponent<AudioSource>();
+
         HitEffect.Stop();
         ResumEffect.Stop();
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 
     // Update is called once per frame
@@ -96,7 +111,11 @@ public class RubyController : MonoBehaviour
                 lookDirection, 1.5f, LayerMask.GetMask("NPC")); //选择了检测层Mask
             if (hit.collider != null)
             {
-                Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+                NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
+                if (character != null)
+                {
+                    character.DisplayDialog();
+                }
             }
         }
 
@@ -120,6 +139,7 @@ public class RubyController : MonoBehaviour
         if (amount < 0)
         {
             HitEffect.Play();
+            this.PlaySound(hitedAudioClip);
         }
         else if (amount > 0)
         {
@@ -136,6 +156,7 @@ public class RubyController : MonoBehaviour
         projectile.Launch(lookDirection, 300);
 
         animator.SetTrigger("Launch");
+        this.PlaySound(lanuchAudioClip);
     }
 
 }
