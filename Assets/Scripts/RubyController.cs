@@ -90,6 +90,16 @@ public class RubyController : MonoBehaviour
             Launch();
         }
 
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, 
+                lookDirection, 1.5f, LayerMask.GetMask("NPC")); //选择了检测层Mask
+            if (hit.collider != null)
+            {
+                Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+            }
+        }
+
     }
 
     public void ChangeHealth(int amount)

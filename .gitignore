@@ -1,0 +1,13 @@
+/obj
+/Library
+/Library/StateCache
+/Library/APIUpdater
+/Library/Artifacts
+/Library/ChinaEditorCache
+/Library/GridBrush
+/Library/PackageCache
+/Library/ScriptAssemblies
+/Library/ShaderCache
+Library
+/Temp
+/.vs
